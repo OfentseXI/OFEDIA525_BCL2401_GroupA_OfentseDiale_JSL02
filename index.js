@@ -34,14 +34,11 @@ const welcomeMessage = () => {
       return;
     }
   
-    // If it's not a duplicate, proceed with adding it as a new goal
     const newGoal = document.createElement("li");
     newGoal.textContent = goalInput;
     goalList.appendChild(newGoal);
-    
-    
-  };
-  // Add event listener to the goal submit button
+    };
+  
   document.querySelector("#submitGoal").addEventListener("click", addNewGoal);
   
   let waterIntake = 0;
