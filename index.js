@@ -7,31 +7,25 @@ const welcomeMessage = () => {
   welcomeMessage();
   
   const displayWorkoutRoutine = () => {
-    const workoutInput = document.querySelector("#workoutInput").value;
-    const workoutList = document.querySelector("#workoutList");
-    const newWorkout = document.createElement("li");
-    newWorkout.textContent = workoutInput;
-    workoutList.appendChild(newWorkout);
-    clearInputField();
-    
+  const workoutInput = document.querySelector("#workoutInput").value;
+  const workoutList = document.querySelector("#workoutList");
+  const newWorkout = document.createElement("li");
+  newWorkout.textContent = workoutInput;
+  workoutList.appendChild(newWorkout);
+  clearInputField();
   };
   
-  // Event listener for submitting workout routine
   document.querySelector("#submitWorkout").addEventListener("click", displayWorkoutRoutine);
-  
-  // ⚠️⚠️⚠️ Lesson 3: Creating and Removing Elements ⚠️⚠️⚠️
-  // Function to add new fitness goals and remove completed ones
+ 
   const addNewGoal = () => {
-    const goalInput = document.querySelector("#goalInput").value;
-    const goalList = document.querySelector("#goalList");
-    clearInputField();
+  const goalInput = document.querySelector("#goalInput").value;
+  const goalList = document.querySelector("#goalList");
+  clearInputField();
   
-    // NOW LET'S DEBUG TO PREVENT DUPLICATE GOALS FROM BEING SUBMITTED 🚀
-    let isDuplicate = false;
+  let isDuplicate = false;
     goalList.querySelectorAll("li").forEach((goal) => {
       if (goal.textContent === goalInput) {
         isDuplicate = true;
-        
       }
     });
     // Prevent duplicates
