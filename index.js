@@ -67,10 +67,9 @@ const welcomeMessage = () => {
     event.preventDefault(); // Prevent form submission
     alert("Meal plan submitted successfully! 🍴");
   };
-  document
-    .querySelector("#mealPlanForm")
-    .addEventListener("submit", submitMealPlan);
+  document.querySelector("#mealPlanForm").addEventListener("submit", submitMealPlan);
 
-  function clearInputField() {
+  const clearInputField = function() {
     document.querySelector("#goalInput").value = "";
     document.querySelector("#workoutInput").value = "";}
+ 
